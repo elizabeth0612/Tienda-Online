@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+    :root{
+        --color-title-background:#BEE1FC;
+        --color-fondo: #0E4C75;
+        --fondo-container:#3282B5;
+    }    
+    .login{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    background-color: var(--color-fondo);
+  }
+  .login-container{
+    width: 300px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--fondo-container);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .title{
+    color: var(--color-title-background);
+    text-align: center;
+    margin: 50px 25px 30px 25px;
+    font-weight: 400;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .input{
+    margin: 3px 0px 3px 0px;
+    height: 35px;
+    width: 80%;
+    border: none;
+    border-radius: 3px;
+    font-weight: bolder;
+    padding-left: 20px;
+    font-size: 16px;
+
+  }
+  .input-button{
+    margin-top: 15px;
+    height: 38px;
+    border: none;
+    font-size: 15px;
+    font-weight: 300;
+    width: 86%;
+    background-color:var(--color-title-background);
+    cursor: pointer;
+
+  }
+  span{
+    font-size: 12px;
+    color: var(--color-title-background);
+    margin-top: 10px;
+
+  }
+  span+span{
+    margin-top: 5px;
+    margin-bottom:50px;
+  }
+  
+  .button-volver{
+    position: absolute;  
+    top: 660px;  
+    color: var(--color-title-background);
+    cursor: pointer;
+
+  }
+  ::placeholder{
+    color:#EDEDED;
+  }
+  @media (max-width:360px) {
+    .button-volver{
+    position: absolute;  
+    top: 600px;  
+  }
+  }
+</style>
+
+<body>
+    <div class="login">
+        <div class="login-container">
+            <h1 class="title">Bienvenido</h1>
+            <form action="" class="form">
+                <input type="text" class="input" placeholder="Usuario" >
+                <input type="text" class="input" placeholder="Contraseña">
+                <input type="submit" value="Login" class="input input-button">
+                <span>¿Perdiste tu contraseña?</span>
+                <span>¿No tienes Cuenta?Registrate</span>
+            </form>
+        
+        </div>
+        <footer class="button-volver">
+            <a  class="">Volver</a>
+        </footer>
+       
+    </div>
+</body>
+
+</html>

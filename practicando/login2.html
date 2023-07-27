@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .container .container-login{
+            background-color: #00292D;
+            
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 400px;
+            background: linear-gradient(to right bottom, rgba(0,41,45,0.96) 50%,rgba(1,33,46,1) 50%);
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+
+        }
+        .container .container-login .form{
+            display: flex;
+            flex-direction: column;
+            margin: 30px 60px 90px 60px;
+        }
+        .form .inputLogin{
+            margin: 15px;
+            width: 60%;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: rgb(255,254,255);
+            opacity: .5;
+        }
+        .form .inputButton{
+            margin: 30px 10px 30px 20px;
+            width: 85%;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            color: #02141D;
+            font-weight: bold;
+            font-size: 17px;
+
+        }
+        .title{
+            color: #F7F9FC;
+            justify-self: center;
+            padding-top: 70px;
+        }
+        .containerInput #user{
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 383px;
+            z-index: 2;
+        }
+        .containerInput #user2{
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 458px;
+            /* left: 585px; */
+            z-index: 2;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-login">
+            <h1 class="title">USER LOGIN</h1>
+           <form action="" class="form">
+            <div class="containerInput">
+                <img  id="user" src="./imagenes/rsz_user.jpg" alt="">
+                <input type="text" placeholder="Username" class="inputLogin">
+                <img id="user2" src="./imagenes/rsz_candado.jpg" alt="">
+                <input type="text" placeholder="Password" class="inputLogin">
+                
+            </div>
+            <input type="submit"  class="inputButton"  value="Login">
+            
+           </form>
+        </div>
+    </div>
+</body>
+</html>

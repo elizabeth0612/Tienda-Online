@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            color: white;
+            font-family: "Lato", Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            place-items: center;
+            background-image: url('imagenes/bg.jpg.webp');
+            filter: contrast(0.98);
+            background-position: center;
+
+        }
+        .container .container-login{
+            display: grid;
+            width: 400px;
+            grid-template-rows: auto 1fr auto auto;
+            grid-template-columns: repeat(1,1fr);
+            position: relative;
+        }
+        h1,h2{
+            text-align: center;
+        }
+         .titulo h2{
+            font-family: 'Lato', sans-serif;     
+        }
+        
+        .container .container-login .form-login{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+        .form-login .inputLogin{
+            height: 55px;
+            border: none;
+            margin: 10px;
+            border-radius: 30px;
+            font-size: 15px;
+            padding-left:20px;
+            background-color: rgba(255, 255, 255, 0.08);
+
+
+        }
+      
+        
+        .form-login .inputButton{
+           background-color:rgba(251,206,181,3) ;
+           padding-left:0px;
+           opacity: 10;
+
+        }
+        ::placeholder{
+            color: white;
+
+        }
+        .section-login , .section-login2 {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-items: center;
+
+        }
+        .section-login2{
+            column-gap: 10px;
+            margin: 5px;
+
+        }
+        .section-login{
+            column-gap: 60px;
+            font-weight: 200;
+        }
+        .section-login label ,.section-login  span{
+            font-weight: bold;
+        }
+        .spanSub{
+            text-align: center;
+            margin: 40px 20px 30px 20px; 
+        }
+        .buttons{
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 5px;
+            border:none;
+            margin-bottom: 50px;
+            background-color: rgba(255,255,255,2);
+
+        }
+        .titulo{
+            margin-bottom: 30px;
+            margin-top: 40px;
+        }
+        .section-login .rem{
+            color:rgb(251,206,181);
+        }
+        input[type=checkbox]+label{
+            display: block;
+            margin: 0.1em;
+            color: rgb(251,206,181);
+            
+        }
+        input[type=checkbox]{
+            display: none;
+            
+        }
+        input[type=checkbox]+label::before{
+            /* display: none; */
+            content: "\2714";
+            border-radius: 0.2em;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            padding-left: 0.2em;
+            padding-bottom: 0.3em;
+            margin-right: 0.8em;
+            vertical-align: bottom;
+            color: transparent;
+            transition:.2s;
+
+        }
+        input[type=checkbox]+label:active:before{
+            transform: scale(0);
+        }
+        input[type=checkbox]:checked +label::before{
+           background-color: rgb(251,206,181);
+           border-color: rgb(251,206,181);
+           color: #fff;
+
+        }
+        input[type=password]::before+i{
+           content: "<i  class="bi bi-eye"></i>";
+        }
+        .form-login .input-icon {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 350px;
+            top: 320px;
+            
+            }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-login">
+            <h1 class="titulo">Login #10</h1>
+            <h2 class="titulo">Have an account?</h2>
+            <form action="" class="form-login">
+                <input type="text" placeholder="Username" class="inputLogin">
+                <input type="password" placeholder="Password" class="inputLogin"><i  class="bi bi-eye input-icon "></i>
+                <input type="submit" value="SING IN" class="inputLogin inputButton">
+            </form>
+           <section class="section-login">
+                
+                <input class="rem" id="remember" type="checkbox" class="rem"><label for="remember">Remember Me</label>
+                
+                <span>Forgot Password</span>
+           </section>
+                <span class="spanSub">--Or Sing In With --</span>
+                
+            <section class="section-login2">
+                <button class="buttons">Facebook</button>
+                <button class="buttons">Twitter</button>
+            </section>
+        </div>
+
+    </div>
+</body>
+</html>
